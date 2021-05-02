@@ -213,4 +213,4 @@ const feed = [{
 
 ]
 
-console.log(feed);
+// console.log(feed);
