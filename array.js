@@ -221,9 +221,12 @@ let strRes = str.split(' ');
 
 // console.log(strRes.join(' '));
 
+
+
+
 // --------[ Papildomai ]----------
 
-// Masyvas nera kaip atskiras duomenu tipas. Jie ( Masyvai ) tai objektas ( Kaip objektas)
+// Masyvas nera kaip atskiras duomenu tipas. Jie ( Masyvai ) tai objektas ( Kaip objektas )
 
 let arrayNew = [];
 let objNew = {};
@@ -243,32 +246,39 @@ let objNew = {};
 // Kaip galima perinkti masyvą
 
 let who = ['Tomas', 'Petras', 'Augustas', 'Karolis'];
-// console.log(names.length);
+// console.log(who.length);
+
+// console.log();
 
 // Ciklai ( Loop )
 // FOR
 // Dek. kintam. | Salyga | inkrementas
-for (let i = 0; i < who.length; i++) {
-    //  console.log(who[i]);
+for (let i = 1; i < 0; i++) {
+    //  console.log(`Dar: ${i}`);
 }
 
 
 // Jei reikia gauti tik reikšmę
 // For of
 
-for (let member of who) {
-    //  console.log(member);
-}
+// for (let member of who) {
+//     console.log(member);
+// }
+
+// for (let member of who) {
+//      console.log(member);
+// }
 
 // foreach atlieka funkciją kiekvienam elm. masyve
 
 who.forEach((item, index, array) => {
-    //  console.log(`${item} index'as yra ${index} masyve: ${array}`);
+    console.log(`${item} index'as yra ${index} masyve: ${array}`);
 });
 
 // Ir dar kartą apie..
-// Masyvas yra objektas todėl ir elgesi kaip objektas
+// Masyvas yra kaip objektas todėl ir elgesi kaip objektas
+// ----------------------------------------
 // Pridėti į masyvą ne skaičių ( indexą ) o tiesiog savybės pvd. kaip indexas | Letina
 // Masyvus reikia naudoti kaip masyvus, o objektus kaip objektus | ! Letina
-// Masyvę daryti skiles 1, 2, ! 7, 8, 9 | Letina
+// Masyvę nedaryti skiliu 1, 2, ! 7, 8, 9 | Letina
 // Arba pildyti atvirksciai [10, 9, 5, 3, 2, 1] | Letina

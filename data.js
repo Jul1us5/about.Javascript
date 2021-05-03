@@ -213,4 +213,17 @@ const feed = [{
 
 ]
 
+
+// for (let object of feed) {
+//     console.log(object);
+// }
+
+// console.log('-------------');
 // console.log(feed);
+
+// let amzius = feed[1].autorius.amzius;
+
+
+// let result1 = feed.find(function(item, index, array) {
+//     return item.autorius.amzius === 10; // grazina tik pirma kuris TRUE
+// });
