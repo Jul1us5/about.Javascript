@@ -253,9 +253,9 @@ let who = ['Tomas', 'Petras', 'Augustas', 'Karolis'];
 // Ciklai ( Loop )
 // FOR
 // Dek. kintam. | Salyga | inkrementas
-for (let i = 1; i < 0; i++) {
-    //  console.log(`Dar: ${i}`);
-}
+
+
+
 
 
 // Jei reikia gauti tik reikšmę
@@ -272,7 +272,7 @@ for (let i = 1; i < 0; i++) {
 // foreach atlieka funkciją kiekvienam elm. masyve
 
 who.forEach((item, index, array) => {
-    console.log(`${item} index'as yra ${index} masyve: ${array}`);
+    //  console.log(`${item} index'as yra ${index} masyve: ${array}`);
 });
 
 // Ir dar kartą apie..

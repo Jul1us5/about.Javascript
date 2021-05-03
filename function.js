@@ -2,12 +2,22 @@
 
 // Funkcijos deklaravimas | Function declaration
 
-function name(parametrai) { // Dek. funkciją su param.
-    // Function body
-    //  console.log(parametrai);
+function calcNumbers(pirmas, antras) { // Dek. funkciją su param.
+
+    let result = pirmas + antras;
+    return console.log(result);
 }
 
-name('Funkcija!'); // Paleisti galima po funkcijos, prieš ir kiek nori kartu
+
+
+// calcNumbers(2, 2);
+// calcNumbers(10, 10);
+// calcNumbers(12, 10);
+// calcNumbers(10, 13);
+// calcNumbers(15, 16);
+// calcNumbers(149, 10);
+
+// calcNumbers(10, 50); // Paleisti galima po funkcijos, prieš ir kiek nori kartu
 
 // Kai kuriam: Funkcijos vardas pagal paskirti | naudoti prefix'us
 // SHOW, GET, CALC, CREATE, UPDATE, CHECK
@@ -36,15 +46,27 @@ function a3() {
 // -------------------------------
 // Matomumas
 
+
+
+
+
 function b1() {
+    let kint = 11111;
     let message = 'Labas!'; // Lokalus kint.
+    console.log(kint);
 }
+
 
 let message; // Globalus kint. | Siom dienom stengtis nenaudoti globaliu, vengti | Nebent saugom kokia nors globalia info
 
 function b2() {
+    let kint = 22222;
+    console.log(kint);
     return message = 'Labas!';
 }
+
+
+
 
 // console.log(b2());
 // -----------------------------------
@@ -63,7 +85,7 @@ function calcNum(a, b) { // Lokalus kint.
 
 // galima nustatyti default reiksme
 
-function calcNum(a = 1, b = 1) {
+function calcNum(a = 0, b = 0) {
     console.log(`Parametras a: ${a}`);
     console.log(`Parametras b: ${b}`);
     let result = a + b;
@@ -71,7 +93,7 @@ function calcNum(a = 1, b = 1) {
     return result;
 }
 
-// console.log(`a + b = ${calcNum(2, 10)}`);
+// console.log(`a + b = ${calcNum(10, 9)}`);
 
 // RETURN po jo fukcija baigia darba. Rašyti į eil.
 
@@ -79,6 +101,7 @@ function calcNum(a = 1, b = 1) {
 // Rekursija | fukcija kuri kviecia pati save..
 // Reikalinga | Naudojamas tada kai reikia atlikti daug kokiu nors užduociu, apskaiciavimu ir pan.
 // Lengviau palaikomas
+
 function multi(numOne, numTwo) {
     if (numTwo === 1) {
         return numOne;
@@ -86,8 +109,9 @@ function multi(numOne, numTwo) {
         return numOne * multi(numOne, numTwo - 1);
     }
 }
+// console.log(multi(2, 10));
 
-// console.log(multi(2, 3));
+
 
 // Funkcijos deklaravimas | Function expression
 
@@ -95,7 +119,8 @@ let howAboutText = function() {
     console.log('Random string');
 }
 
-// howAboutText();
+
+
 
 // ----------------------------
 
@@ -142,9 +167,9 @@ a => a + 100;
 
 // ------------------------------
 
-let helloFunction = (text, name) => `${text} ${name}!`
+let helloFunction = (text, name) => `${text} ${name}!`;
 
-// console.log(helloFunction('Labas', 'Juliau'));
+console.log(helloFunction('Labas', 'Juliau'));
 
 // -----------------------------
 // Ir dar šiek tiek apie..
