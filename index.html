@@ -5,13 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array</title>
+    <link rel="stylesheet" href="./style/app.css">
+    <link rel="stylesheet" href="./style/font-awesome.min.css">
+    <title>Facebook Feed</title>
 </head>
 
 <body>
-    <script src="./data.js"></script>
-    <script src="./array.js"></script>
-    <script src="./function.js"></script>
+    <div class="wrapper">
+        <header class="header"></header>
+        <main class="main">
+            <aside class="left"></aside>
+            <section class="section">
+                <div class="card">
+                    <div class="card__head">
+                        <img src="./img/avatar/user.png" alt="avataras">
+                        <div class="user">
+                            <div class="name">Vardenis P.</div>
+                            <div class="time">2021.10.12</div>
+                        </div>
+                        <div class="more">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="card__main"></div>
+                    <div class="card__footer"></div>
+                </div>
+            </section>
+            <div class="right"></div>
+        </main>
+    </div>
+
 </body>
 
 </html>

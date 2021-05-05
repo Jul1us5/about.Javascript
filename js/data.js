@@ -186,7 +186,6 @@ const feed = [{
             ]
         }
     },
-
     {
         autorius: {
             vardas: 'Vardenis',

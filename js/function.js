@@ -169,7 +169,7 @@ a => a + 100;
 
 let helloFunction = (text, name) => `${text} ${name}!`;
 
-console.log(helloFunction('Labas', 'Juliau'));
+// console.log(helloFunction('Labas', 'Juliau'));
 
 // -----------------------------
 // Ir dar šiek tiek apie..
@@ -188,7 +188,7 @@ function helloAgain(text, name) {
     ++loop;
 }
 
-// setInterval(helloAgain, 3000, 'Labas', 'Juliau');
+// setInterval(helloAgain, 1000, 'Labas', '...!');
 
 // -------------------------------------------
 
@@ -208,7 +208,7 @@ function helloAgain(text, name) {
 
 }
 
-// setTimeout(helloAgain, 3000, 'Labas', 'Juliau');
+setTimeout(helloAgain, 3000, 'Labas', 'Juliau');
 
 // Ir funkcijos: paprastos, mažos, atlieką vieną tam tikrą darbą ir viskas
 // O jei funkcija turi didelį funk. tai padalinam per kelias funkcijas ir su kita fun. iškviečiam viską
