@@ -200,7 +200,7 @@ const feed = [{
             tekstas: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex earum tenetur odit nemo id architecto laborum iure error, aliquid nisi',
             spalva: '',
             paveiksliukai: [
-                '1.png',
+                '3.jpeg',
                 '2.png',
                 '3.png',
                 '4.png',

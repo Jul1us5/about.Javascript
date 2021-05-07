@@ -1,25 +1,33 @@
 "use strict";
 
+
 function getData(data) {
+
+
+
 
     let HTML = '';
     let sectionBody = document.querySelector('.section');
 
     if (Array.isArray(data)) {
 
+        // -----------
         for (let i = 0; i < data.length; i++) {
 
             HTML += getList(data[i]);
         }
 
         return sectionBody.innerHTML = HTML;
+        // -----------
 
     } else {
-        return console.log('Tai ne masyvas!');
+        return console.error('Tai ne masyvas!');
     }
 }
 
 function getList(list) {
+
+    console.log(list.pranesimas.paveiksliukai[0]);
 
     let HTML = `<div class="card">
                   <div class="card__head">
@@ -33,7 +41,9 @@ function getList(list) {
                      </div>
                   </div>
                   <div class="card__main">${list.pranesimas.tekstas}</div>
-                  <div class="card__footer">footer</div>
+                  <div class="card__footer">
+                     <img src="./img/${list.pranesimas.paveiksliukai[0]}" alt="">
+                  </div>
                </div>`;
 
     return HTML;
