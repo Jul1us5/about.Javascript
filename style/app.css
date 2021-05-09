@@ -88,6 +88,7 @@ h6 {
 .wrapper {
   width: 100%;
   overflow-x: hidden;
+  font-family: 'Itim', cursive;
 }
 
 .wrapper .header {
@@ -112,7 +113,7 @@ h6 {
 .wrapper .main .section {
   width: 100%;
   height: 90vh;
-  background-color: cornflowerblue;
+  background-color: #f2f2f2;
   overflow-y: scroll;
 }
 
@@ -122,7 +123,6 @@ h6 {
 
 .wrapper .main .section .card {
   width: 70%;
-  height: 250px;
   margin-left: 15%;
   border: 1px solid rgba(57, 57, 57, 0.892);
   border-radius: 10px;
@@ -130,6 +130,7 @@ h6 {
   margin-top: 10px;
   overflow: hidden;
   padding: 10px;
+  box-shadow: 2px 4px 20px 0px #848c93;
 }
 
 .wrapper .main .section .card:first-of-type {
@@ -142,14 +143,14 @@ h6 {
 
 .wrapper .main .section .card .card__head {
   display: grid;
-  grid-template-columns: 2fr 10fr 1fr;
+  grid-template-columns: 1fr 12fr 1fr;
   width: 100%;
 }
 
 .wrapper .main .section .card .card__head img {
   width: 50px;
   height: 50px;
-  margin-left: 20px;
+  margin-right: 15px;
 }
 
 .wrapper .main .section .card .card__head .user {
@@ -164,6 +165,8 @@ h6 {
 
 .wrapper .main .section .card .card__head .user .time {
   width: 100%;
+  font-size: 12px;
+  font-family: bold;
 }
 
 .wrapper .main .section .card .card__head .more {
@@ -171,6 +174,84 @@ h6 {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.wrapper .main .section .card .card__main {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0px;
+}
+
+.wrapper .main .section .card .card__main p {
+  color: grey;
+  font-size: 18px;
+  letter-spacing: .5px;
+  font-family: 'Girassol', cursive;
+}
+
+.wrapper .main .section .card .card__main .gallery {
+  display: inline-block;
+  width: 100%;
+}
+
+.wrapper .main .section .card .card__main .gallery img {
+  display: inline-block;
+  width: 100%;
+  height: 250px;
+  background-position: center center;
+  background-size: cover;
+  padding: 10px 0px 0px 0px;
+}
+
+.wrapper .main .section .card .controller {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 5px 0px;
+  border-top: 1px solid rgba(128, 128, 128, 0.788);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.788);
+}
+
+.wrapper .main .section .card .controller span {
+  width: 200px;
+  text-transform: capitalize;
+}
+
+.wrapper .main .section .card .card__footer {
+  display: grid;
+  grid-template-columns: 1fr 10fr 4fr;
+  width: 100%;
+  padding: 10px 0px 5px 0px;
+}
+
+.wrapper .main .section .card .card__footer img {
+  display: inline;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.wrapper .main .section .card .card__footer textarea {
+  border: 1px solid grey;
+  border-radius: 10px;
+  resize: none;
+  padding: 10px 6px 0px 6px;
+  margin: 0px 10px;
+}
+
+.wrapper .main .section .card .card__footer .actions {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.wrapper .main .section .card .card__footer .actions .fa {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .wrapper .main .right {

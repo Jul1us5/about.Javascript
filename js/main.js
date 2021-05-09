@@ -51,4 +51,4 @@ function getList(list) {
 
 
 //----------- !!!!!!!
-getData(feed);
+// getData(feed);
