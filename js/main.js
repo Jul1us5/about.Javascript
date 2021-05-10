@@ -4,17 +4,19 @@
 function getData(data) {
 
 
-
-
     let HTML = '';
     let sectionBody = document.querySelector('.section');
 
     if (Array.isArray(data)) {
 
         // -----------
-        for (let i = 0; i < data.length; i++) {
+        //  for (let i = 0; i < data.length; i++) {
 
-            HTML += getList(data[i]);
+        //      HTML += getList(data[i]);
+        //  }
+
+        for (let index of data) {
+            HTML += getList(index);
         }
 
         return sectionBody.innerHTML = HTML;
@@ -25,30 +27,107 @@ function getData(data) {
     }
 }
 
+// Main FUNCTION
+
 function getList(list) {
 
-    console.log(list.pranesimas.paveiksliukai[0]);
-
     let HTML = `<div class="card">
-                  <div class="card__head">
-                     <img src="./img/avatar/user.png" alt="avataras">
-                     <div class="user">
-                           <div class="name">${list.autorius.vardas} ${list.autorius.pavarde}</div>
-                           <div class="time">${list.laikas}</div>
-                     </div>
-                     <div class="more">
-                           <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-                     </div>
+                  ${returnHeader(list.autorius, list.laikas)}
+                  ${returnMain(list.pranesimas)}
+                  ${returnFooter(list.autorius)}
+               </div>`;
+
+    return HTML;
+}
+
+// Helper FUNCTION | Returns
+
+function returnHeader(who, time) {
+
+    let HTML = `<div class="card__head">
+                  ${getAvatar(who)}
+                  <div class="user">
+                     <div class="name">${who.vardas} ${who.pavarde}</div>
+                     <div class="time">${time}</div>
                   </div>
-                  <div class="card__main">${list.pranesimas.tekstas}</div>
-                  <div class="card__footer">
-                     <img src="./img/${list.pranesimas.paveiksliukai[0]}" alt="">
+                  <div class="more">
+                     <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                  </div>
+               </div>`;
+    return HTML;
+}
+
+function returnMain(text) {
+
+    let HTML = `<div class="card__main">
+                  ${getText(text)}
+                  <div class="gallery">
+                     <img src="./img/5.jpeg" alt="img">
                   </div>
                </div>`;
 
     return HTML;
 }
 
+function returnFooter(who) {
+
+    let HTML = `<div class="controller">
+                  <span>like</span>
+                  <span>comment</span>
+                  <span>share</span>
+               </div>
+               <div class="card__footer">
+               ${getAvatar(who)}
+                  <textarea placeholder="Your message"></textarea>
+                  <div class="actions">
+                     <i class="fa fa-smile-o" aria-hidden="true"></i>
+                     <i class="fa fa-camera-retro" aria-hidden="true"></i>
+                     <i class="fa fa-picture-o" aria-hidden="true"></i>
+                     <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                  </div>
+               </div>`;
+
+    return HTML;
+}
+
+function getText(message) {
+
+    let messageText = message.tekstas;
+    let kiek = 10;
+    let textArr = messageText.split(' ');
+    let normal = textArr.length;
+    let cutted = '';
+
+
+    // ... ?
+    if (normal.length < kiek) {
+        cutted = normal.length;
+        console.log(cutted);
+    }
+
+
+    let HTML = `<p>${message.tekstas}</p>`;
+
+    return HTML;
+}
+
+// Global Function 
+
+function getAvatar(img) {
+
+
+
+
+
+    if (img.avataras === '') {
+        img.avataras = 'user.png';
+    }
+
+    let HTML = `<img src="./img/avatar/${img.avataras}" alt="avataras">`;
+
+    return HTML;
+}
+
 
 //----------- !!!!!!!
-// getData(feed);
+getData(feed);

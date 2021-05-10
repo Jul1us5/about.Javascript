@@ -60,7 +60,7 @@ const feed = [{
             pavarde: 'Pavardenis',
             amzius: 50,
             lytis: 'Vyras',
-            avataras: '3.png',
+            avataras: '1.png',
             nuoroda: '#',
         },
         laikas: 1583832434388,
@@ -161,7 +161,7 @@ const feed = [{
             paveiksliukai: [
                 '1.png',
                 '2.png',
-                '3.png',
+                '1.png',
             ]
         }
     },
@@ -181,7 +181,7 @@ const feed = [{
             paveiksliukai: [
                 '1.png',
                 '2.png',
-                '3.png',
+                '1.png',
                 '4.png',
             ]
         }
@@ -202,7 +202,7 @@ const feed = [{
             paveiksliukai: [
                 '3.jpeg',
                 '2.png',
-                '3.png',
+                '1.png',
                 '4.png',
                 '5.png',
                 '6.png',
