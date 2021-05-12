@@ -79,8 +79,12 @@
                     p {
                         color: grey;
                         font-size: 18px;
-                        letter-spacing: .5px;
                         font-family: 'Girassol', cursive;
+                    }
+                    span {
+                        color: blue;
+                        font-size: 12px;
+                        cursor: pointer;
                     }
                     .gallery {
                         display: inline-block;

@@ -11,7 +11,7 @@ const feed = [{
         },
         laikas: 1583832433393,
         pranesimas: {
-            tekstas: 'Sveiki, as esu Tomas.',
+            tekstas: 'Sveiki, as esu Tomas. Sveiki, as esu Tomas. Sveiki, as esu Tomas. Sveiki, as esu Tomas. Sveiki, as esu Tomas. Sveiki, as esu Tomas. Sveiki, as esu Tomas. Sveiki, as esu Tomas. Sveiki, as esu Tomas. Sveiki, as esu Tomas. Sveiki, as esu Tomas. Sveiki, as esu Tomas. Sveiki, as esu Tomas. Sveiki, as esu Tomas. Sveiki, as esu Tomas.',
             spalva: '',
             paveiksliukai: [
 

@@ -93,41 +93,60 @@ function returnFooter(who) {
 function getText(message) {
 
     let messageText = message.tekstas;
+
+    let HTML;
     let kiek = 10;
+    let cutted;
+    let print;
     let textArr = messageText.split(' ');
-    let normal = textArr.length;
-    let cutted = '';
 
+    // Cutted TEXT first
+    if (textArr.length > kiek) {
+        cutted = textArr.slice();
+        cutted.length = kiek;
+        print = cutted.join(' ');
+        HTML = `<p value="${messageText}">${print}</p><span id="showMore">...show more</span>`;
+    } else {
+        //  Normal TEXT
+        print = textArr.join(' ');
+        HTML = `<p>${print}<span></span></p>`;
 
-    // ... ?
-    if (normal.length < kiek) {
-        cutted = normal.length;
-        console.log(cutted);
     }
 
 
-    let HTML = `<p>${message.tekstas}</p>`;
-
     return HTML;
+}
+
+function renderText() {
+
+    let cards = document.querySelectorAll('.card');
+    let showButton = document.querySelectorAll('.card__main span');
+    let cardMain = document.querySelectorAll('.card__main p');
+    //  let showButton = document.getElementById('.showMore');
+
+    for (let i = 0; i < showButton.length; i++) {
+
+        let feedText = feed[i].pranesimas.tekstas;
+        showButton[i].addEventListener('click', (e) => {
+
+            cardMain[i].innerHTML = feedText;
+        });
+    }
 }
 
 // Global Function 
 
 function getAvatar(img) {
 
-
-
-
-
     if (img.avataras === '') {
         img.avataras = 'user.png';
     }
-
     let HTML = `<img src="./img/avatar/${img.avataras}" alt="avataras">`;
 
     return HTML;
 }
 
 
-//----------- !!!!!!!
 getData(feed);
+
+renderText();

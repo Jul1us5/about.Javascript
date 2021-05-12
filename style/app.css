@@ -185,8 +185,13 @@ h6 {
 .wrapper .main .section .card .card__main p {
   color: grey;
   font-size: 18px;
-  letter-spacing: .5px;
   font-family: 'Girassol', cursive;
+}
+
+.wrapper .main .section .card .card__main span {
+  color: blue;
+  font-size: 12px;
+  cursor: pointer;
 }
 
 .wrapper .main .section .card .card__main .gallery {
