@@ -10,14 +10,14 @@ function getData(data) {
     if (Array.isArray(data)) {
 
         // -----------
-        //  for (let i = 0; i < data.length; i++) {
+        for (let i = 0; i < data.length; i++) {
 
-        //      HTML += getList(data[i]);
-        //  }
-
-        for (let index of data) {
-            HTML += getList(index);
+            HTML += getList(data[i]);
         }
+
+        //   for (let index of data) {
+        //       HTML += getList(index);
+        //   }
 
         return sectionBody.innerHTML = HTML;
         // -----------
@@ -48,7 +48,7 @@ function returnHeader(who, time) {
                   ${getAvatar(who)}
                   <div class="user">
                      <div class="name">${who.vardas} ${who.pavarde}</div>
-                     <div class="time">${time}</div>
+                     ${getTime(time)}
                   </div>
                   <div class="more">
                      <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
@@ -59,15 +59,18 @@ function returnHeader(who, time) {
 
 function returnMain(text) {
 
+
+    //  console.log(text);
+
     let HTML = `<div class="card__main">
                   ${getText(text)}
-                  <div class="gallery">
-                     <img src="./img/5.jpeg" alt="img">
-                  </div>
-               </div>`;
+                  ${getGallery(text.paveiksliukai)}
+                </div>`;
 
     return HTML;
 }
+// ${getGallery(text.paveiksliukai)}
+// ${getGallery(text.paveiksliukai)}
 
 function returnFooter(who) {
 
@@ -88,6 +91,90 @@ function returnFooter(who) {
                </div>`;
 
     return HTML;
+}
+
+function getGallery(img) {
+
+
+
+    let HTML = '';
+    let pictures = '';
+    let kiek = 4;
+
+
+    if (img.length > 0) {
+
+        for (let i = 0; i < img.length; i++) {
+            pictures += `<img src="./img/${img[i]}" alt="pic">`;
+            if (img.length > kiek) {
+                img.length = kiek;
+            }
+            HTML = `<div class="gallery">
+                        <div class="gallery__wrap length--${i + 1}">
+                        ${pictures}
+                        </div>
+                     </div>`;
+        }
+    }
+
+
+    return HTML;
+
+}
+
+function getTime(time) {
+
+    //  console.log(time);
+
+    let HTML = '';
+
+    var msPerMinute = 60 * 1000;
+    var msPerHour = msPerMinute * 60;
+    var msPerDay = msPerHour * 24;
+    var msPerMonth = msPerDay * 30;
+    var msPerYear = msPerDay * 365;
+    var previous = new Date(time);
+    var current = new Date().getTime();
+
+    var elapsed = current - previous;
+
+    if (elapsed < msPerMinute) {
+        return Math.round(elapsed / 1000).toString() + " seconds ago";
+    } else if (elapsed < msPerHour) {
+        return Math.round(elapsed / msPerMinute).toString() + " minutes ago";
+    } else if (elapsed < msPerDay) {
+        return Math.round(elapsed / msPerHour).toString() + " hours ago";
+    } else if (elapsed < msPerMonth) {
+        return Math.round(elapsed / msPerDay).toString() + " days ago";
+    } else if (elapsed < msPerYear) {
+        return Math.round(elapsed / msPerMonth).toString() + " months ago";
+    } else {
+        return Math.round(elapsed / msPerYear).toString() + " years ago";
+    }
+
+
+    //  let time;
+    //  let y = Math.floor(list / 3600 / 24 / 365);
+    //  let d = Math.floor(list / 3600 / 24);
+    //  let h = Math.floor(list / 3600);
+    //  let min = Math.floor(list / 60);
+
+    //  if (y > 0) {
+    //      time = `${y} y.`;
+    //  } else if (d > 0) {
+    //      time = `${d} d.`;
+    //  } else if (h > 0) {
+    //      time = `${h} h.`;
+    //  } else if (min > 0) {
+    //      time = `${min} min.`;
+    //  } else {
+    //      time = `${list} s.`
+    //  }
+    //  HTML = `<div class="time">${time}</div>`;
+
+    //  return HTML;
+
+
 }
 
 function getText(message) {
